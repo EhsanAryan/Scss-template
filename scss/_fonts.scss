@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "BYekan";
+    src: url("../font/BYekan/BYekan-webfont.eot") format("eot") ,
+    url("../font/BYekan/BYekan-webfont.woff") format("woff") ,
+    url("../font/BYekan/BYekan-webfont.ttf") format("truetype");
+    font-weight: normal;
+}
+
+$persian-font: "BYekan";
+$english-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
