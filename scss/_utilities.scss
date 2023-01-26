@@ -20,7 +20,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .divider::after {
@@ -59,4 +59,12 @@
 
 .mt-0 {
     margin-top: 0 !important;
+}
+
+.opacity-1 {
+    opacity: 1 !important;
+}
+
+.left-0 {
+    left: 0 !important;
 }
