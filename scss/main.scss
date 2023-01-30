@@ -2,6 +2,7 @@
 @import "functions";
 @import "fonts";
 @import "utilities";
+@import "scrollbar";
 
 body {
     margin: 0;
@@ -103,15 +104,7 @@ body {
     }
 }
 
-@media screen and (max-width: 768px) {
-    #menu-trigger {
-        display: flex;
-    }
 
-    .nav-list {
-        display: none;
-    }
-}
 
 #hidden-nav-base {
     display: none;
@@ -368,37 +361,6 @@ body {
     }
 }
 
-
-@media screen and (max-width: 992px) {
-    .card-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card {
-        border-bottom: 3px solid black;
-    }
-
-    .card:is(:nth-child(3) , :nth-child(4)) {
-        border-bottom: none;
-    }
-
-    .transparent-card , .circle-card {
-        padding-bottom: 15px;
-        border-bottom: 2px solid rgba(128, 128, 128, 0.6);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .card-container {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        border-bottom: none !important;
-    }
-
-}
-
 #footer {
     background-color: $dark-color;
     color: $light-color;
@@ -460,6 +422,49 @@ body {
 }
 
 
+// Media queries
+@media screen and (max-width: 768px) {
+    #menu-trigger {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        border-bottom: 3px solid black;
+    }
+
+    .card:is(:nth-child(3) , :nth-child(4)) {
+        border-bottom: none;
+    }
+
+    .transparent-card , .circle-card {
+        padding-bottom: 15px;
+        border-bottom: 2px solid rgba(128, 128, 128, 0.6);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        border-bottom: none !important;
+    }
+
+}
+
+
 @media screen and (max-width: 925px) {
     .footer-container {
         padding: 15px 2rem 10px !important;
@@ -485,24 +490,3 @@ body {
         margin: 0 !important;
     }
 }
-
-// Start custom scrollbar
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: $light-color;
-    box-shadow: 0px 0px 5px $dark-color inset;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: $primary-color;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: $thumb-scrollbar-color;
-}
-// End custom scrollbar
