@@ -6,13 +6,13 @@ const showHiddenNav = () => {
     navBase.style.display = "block";
     setTimeout(() => {
         navBase.classList.add("opacity-1");
-        navBox.classList.add("left-0");
+        navBox.classList.add("scale-1");
     }, 10);
 };
 
 const hideHiddenNav = () => {
     navBase.classList.remove("opacity-1");
-    navBox.classList.remove("left-0");
+    navBox.classList.remove("scale-1");
     setTimeout(() => {
         navBase.style.display = "none";
     }, 500);
